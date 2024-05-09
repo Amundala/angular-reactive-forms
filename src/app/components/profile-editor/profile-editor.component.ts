@@ -5,6 +5,7 @@ import {
   FormGroup,
   ReactiveFormsModule,
   FormBuilder,
+  Validators,
 } from '@angular/forms';
 
 @Component({
@@ -32,7 +33,7 @@ export class ProfileEditorComponent {
 
   //--- using form builder ---
   profileForm = this.formBuilder.group({
-    firstName: [''],
+    firstName: ['', Validators.required],
     lastName: [''],
     address: this.formBuilder.group({
       street: [''],
