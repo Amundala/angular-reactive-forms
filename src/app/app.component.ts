@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
+import { ProfileEditorComponent } from './components/profile-editor/profile-editor.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, ProfileEditorComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
