@@ -1,6 +1,6 @@
 <div><h1>Another Form</h1></div>
-<div>
-  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <div>
     <label for="fNmae"></label>
     <input id="fNmae" type="text" formControlName="firstName" />
     <label for="lNmae"></label>
@@ -8,5 +8,18 @@
     <button type="submit" [disabled]="!profileForm.valid">
       Submit Profile
     </button>
-  </form>
-</div>
+  </div>
+  <div formGroupName="address">
+    <h2>Address</h2>
+    <label for="street">Street</label>
+    <input id="street" type="text" formControlName="street" />
+    <label for="city">City</label>
+    <input id="city" type="text" formControlName="city" />
+    <label for="state">State</label>
+    <input id="state" type="text" formControlName="state" />
+    <label for="zip">Zip code</label>
+    <input id="zip" type="text" formControlName="zip" />
+  </div>
+
+  <button (click)="onSubmit()">Check Values</button>
+</form>
